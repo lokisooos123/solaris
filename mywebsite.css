@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(hello.jpg) no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.box {
+    height: 700px;
+    width: 450px;
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    
+    color: white;
+    font-family: verdana;
+    align-items: center;
+}
+
+.boximg {
+    animation: fade 3s;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.box h1 {
+    animation: slide-up 3s;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+.box h5 {
+    animation: slide-up 3s;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 100;
+
+}
+
+.box #number1 {
+    
+    position: absolute;
+    font-size: 30px;
+    top: 690px;
+    left: 429px;
+    border-radius: 30px;
+    height: 60px;
+    width: 100px;
+    color: white;
+    font-family: verdana;
+    background-color: crimson;
+    text-decoration: none;
+    text-align: center;
+}
+.box #number1:hover{
+    background-color: coral;
+}
+
+.box #number2{
+    position: absolute;
+    font-size: 30px;
+    top: 690px;
+    left: 565px;
+    border-radius: 30px;
+    height: 60px;
+    width: 125px;
+    color: white;
+    font-family: verdana;
+    background-color: crimson;
+    text-decoration: none;
+    text-align: center;
+}
+.box #number2:hover{
+    background-color: coral;
+}
+
+
+.box #number3{
+    position: absolute;
+    font-size: 30px;
+    top: 690px;
+    left: 720px;
+    border-radius: 30px;
+    height: 60px;
+    width: 160px;
+    color: white;
+    font-family: verdana;
+    background-color: crimson;
+    text-decoration: none;
+    text-align: center;
+}
+.box #number3:hover{
+    background-color: coral;
+}
+
+h6 {
+    animation: slide-up 3s;
+    position: absolute;
+    text-align: center;
+    left: 500px;
+    top: 760px;
+    font-size: large;
+    font-weight: 100;
+    font-family: verdana;
+    
+}
+
+@keyframes fade {
+    from {
+        opacity:0.2;
+        
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+@keyframes slide-up {
+    from {
+        line-height: 200px;
+    }
+
+    to {
+        line-height: 25px;
+    }
+}
