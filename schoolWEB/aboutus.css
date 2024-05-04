@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(egypt.jpg);
+    background-repeat: repeat-y;
+    
+}
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.text {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    color: white; /* White background */
+    padding: 20px;
+    text-align: center;
+    border-radius: 0; /* No rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    animation: float 1.5s infinite alternate;
+}
+
+@keyframes float{
+    0%{
+        top:65%;
+
+    }
+    100%{
+        top:60%;
+    }
+}
+
+.text h2 {
+    color: whitesmoke; /* Black color for h2 */
+    font-size: 35px; /* Size 35px */
+    background: none; /* No background for h2 */
+    margin-top: 20px;
+
+}
+
+.text p {
+    color: whitesmoke; /* Black color for p */
+    font-size: 20px; /* Size 20px */
+    font-family: sans-serif; /* Sans-serif font */
+    background: none; /* No background for p */
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999; /* To keep it on top of other content */
+    background-color: #3f3f4e;
+}
+
+.navbar-container {
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3f3f4e; /* Nice shade of gray */
+}
+
+.logo {
+    padding-left: 20px;
+    height:40px;
+    width: 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white; /* Adjusted color for links */
+    text-transform: uppercase;
+    background-color: inherit;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #CCAA14; /* Darker color on hover */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navbar-container {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt-Grade9</title>
+    <link rel="stylesheet" href="moreinfo.css">
+</head>
+<body>
+    <div class="text"> 
+        <h2>Countdown timer till the culture day</h2>
+        <div id="timer">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+    <script>
+        // Target date: May 18th
+        const targetDate = new Date('May 18, 2024 00:00:00').getTime();
+
+        // Update the countdown every second
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        function updateTimer() {
+          // Get the current date and time
+          const now = new Date().getTime();
+
+          // Calculate the time remaining
+          const timeRemaining = targetDate - now;
+
+          // Calculate days, hours, minutes, and seconds
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+          // Display the countdown timer
+          document.getElementById('days').innerText = padZero(days);
+          document.getElementById('hours').innerText = padZero(hours);
+          document.getElementById('minutes').innerText = padZero(minutes);
+          document.getElementById('seconds').innerText = padZero(seconds);
+
+          // If the countdown is over, stop the timer
+          if (timeRemaining < 0) {
+            clearInterval(timerInterval);
+            document.getElementById('timer').innerText = 'Countdown Over!';
+          }
+        }
+
+        // Add leading zero to numbers less than 10
+        function padZero(number) {
+          return (number < 10 ? '0' : '') + number;
+        }
+    </script>
+
+    <div class="banner"></div>
+    <div class="navbar">
+        <div class="navbar-container">
+            <img src="download.png" class="logo">
+            <ul>
+                <li><a href="website.html">Home</a></li>
+                <li><a href="moreinfo.html">More Info</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
